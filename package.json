@@ -1,0 +1,113 @@
+{
+  "name": "friday-app",
+  "description": "React Native Starter Kit, using TypeScript with React Native Navigation",
+  "keywords": [
+    "react native",
+    "typescript",
+    "starter kit",
+    "redux thunk",
+    "react native navigation",
+    "boilerplate"
+  ],
+  "version": "0.5.0",
+  "author": {
+    "name": "Amit Mangal",
+    "email": "mangalamitash@gmail.com",
+    "url": "https://github.com/AmitM30"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AmitM30/react-native-typescript-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/AmitM30/react-native-typescript-boilerplate/issues",
+    "email": "mangalamitash@gmail.com"
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "cross-env-shell jest",
+    "ios": "npx react-native run-ios --simulator='iPhone 12 Pro'",
+    "android": "npx react-native run-android --variant=Debug",
+    "clean:android": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease && cd ..",
+    "build:android:debug": "./gradlew assembleDebug",
+    "build:android:release": "./gradlew assembleRelease",
+    "lint": "cross-env-shell tslint --project ./tsconfig.json",
+    "lint:fix": "cross-env-shell tslint --fix --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.66.0",
+    "react-native-navigation": "^7.23.1",
+    "react-redux": "^7.2.4",
+    "redux": "4.1.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^24.0.23",
+    "@types/react": "^17.0.15",
+    "@types/react-native": "^0.64.12",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/redux-logger": "^3.0.8",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^25.1.0",
+    "babel-preset-airbnb": "^3.2.0",
+    "babel-preset-react-native": "^4.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.2",
+    "eslint-watch": "^4.0.2",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-native-typescript-transformer": "^1.2.11",
+    "react-test-renderer": "^17.0.2",
+    "redux-logger": "^3.0.6",
+    "regenerator-runtime": "^0.13.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.7.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!ios/**",
+      "!android/**"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.9.2"
+  }
+}
